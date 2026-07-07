@@ -5,11 +5,11 @@ export default function Footer() {
   return (
     <footer className="bg-[#0b0b0b] text-stone-400 pt-20 pb-10 px-6 md:px-16 border-t border-stone-900/50 select-none">
       <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
-        
+
         {/* Column 1: Branding & Description (Col Span 4) */}
         <div className="lg:col-span-4 flex flex-col items-start">
           <h3 className="font-rostex text-lg md:text-xl text-stone-100 tracking-[0.2em] uppercase mb-5">
-            Son Serenity Lake
+            COTTAGES ON SERENITY LAKE
           </h3>
           <p className="font-sans font-light text-stone-500 text-xs md:text-sm leading-relaxed max-w-sm">
             Experience the perfect blend of natural tranquility and premium luxury. Nestled on pristine lakefront shores, our cabins offer private waterfronts, hot tubs, and peaceful getaways designed to help you reconnect with nature.
@@ -63,8 +63,8 @@ export default function Footer() {
           <ul className="space-y-4 font-sans text-xs tracking-wider text-stone-500">
             <li className="flex items-center gap-3">
               <Mail className="w-4 h-4 text-stone-600 shrink-0" />
-              <a 
-                href="mailto:alisaalicia04@aol.com" 
+              <a
+                href="mailto:alisaalicia04@aol.com"
                 className="hover:text-white transition-colors duration-300 block truncate"
               >
                 ALISAALICIA04@AOL.COM
@@ -72,8 +72,8 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Phone className="w-4 h-4 text-stone-600 shrink-0" />
-              <a 
-                href="tel:(800)997-9575" 
+              <a
+                href="tel:(800)997-9575"
                 className="hover:text-white transition-colors duration-300 block"
               >
                 PH. (800) 997-9575
@@ -81,8 +81,8 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Smartphone className="w-4 h-4 text-stone-600 shrink-0" />
-              <a 
-                href="tel:(520)404-1142" 
+              <a
+                href="tel:(520)404-1142"
                 className="hover:text-white transition-colors duration-300 block"
               >
                 CELL (520) 404-1142
