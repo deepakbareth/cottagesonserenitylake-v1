@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
+import logo from '../assets/logo3.jpg';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -44,12 +45,12 @@ export default function Navbar() {
     return (
         <>
             {/* Top Navbar */}
-            <nav className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-black/50 to-transparent py-4 md:py-6 px-4 md:px-12 flex items-center justify-between text-white transition-all duration-300">
+            <nav className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-black/50 to-transparent  px-4 md:px-12 flex items-center justify-between text-white transition-all duration-300">
 
                 {/* Left Side: Menu Toggle Icon (Glassmorphic) */}
                 <button
                     onClick={toggleMenu}
-                    className="group cursor-pointer flex items-center justify-center p-2 md:p-2.5 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/10 hover:border-white/30 transition-all duration-300 focus:outline-none shrink-0"
+                    className="group cursor-pointer flex items-center justify-center p-2.5  rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/10 hover:border-white/30 transition-all duration-300 focus:outline-none shrink-0"
                     aria-label="Toggle Menu"
                 >
                     {isOpen ? (
@@ -65,7 +66,7 @@ export default function Navbar() {
                         href="#"
                         className="font-serif text-[10px] min-[375px]:text-xs sm:text-sm md:text-2xl font-light tracking-widest md:tracking-[0.15em] uppercase hover:opacity-80 transition-opacity truncate"
                     >
-                        Son Serenity Lake
+                        <img src={logo} alt="logo" className='h-20 md:h-40' />
                     </a>
                 </div>
 
@@ -89,7 +90,7 @@ export default function Navbar() {
             </nav>
 
             {/* Floating Menu Buttons */}
-            <div className="fixed top-[72px] md:top-[92px] left-4 md:left-[10px] z-50 flex flex-col gap-2.5 md:gap-3 items-start pointer-events-none max-w-[90vw]">
+            <div className="fixed top-[72px] md:top-[120px] left-4 md:left-[10px] z-50 flex flex-col gap-2.5 md:gap-3 items-start pointer-events-none max-w-[90vw]">
                 {renderItems.map((item, idx) => {
                     const isActive = activeItem === item.name;
                     const isCottagesToggle = item.hasDropdown;
