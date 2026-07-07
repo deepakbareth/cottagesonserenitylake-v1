@@ -2,6 +2,9 @@ import React from 'react';
 import Navbar from './layout/Navbar';
 import Hero from './components/Home/Hero';
 import PheasantCottage from './components/Home/PheasantCottage';
+import BearsDen from './components/Home/BearsDen';
+import TallPinesLodge from './components/Home/TallPinesLodge';
+import Footer from './layout/Footer';
 
 function App() {
   return (
@@ -15,10 +18,15 @@ function App() {
         <Hero />
       </header>
 
-      {/* Pheasant Cottage Section */}
+      {/* Cottages Showcase Sections */}
       <main>
         <PheasantCottage />
+        <BearsDen />
+        <TallPinesLodge />
       </main>
+
+      {/* Footer */}
+      <Footer />
 
     </div>
   );

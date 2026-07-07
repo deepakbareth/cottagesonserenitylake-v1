@@ -1,6 +1,6 @@
 import React from 'react';
 import hero2 from '../../assets/hero2.jpg';
-import hero1 from '../../assets/banner/hero6.jpg';
+import hero1 from '../../assets/banner/hero7.jpg';
 
 export default function Hero() {
   return (
