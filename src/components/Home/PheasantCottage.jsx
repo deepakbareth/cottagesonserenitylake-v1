@@ -18,8 +18,18 @@ export default function PheasantCottage() {
   return (
     <section id="pheasant-cottage" className="w-full bg-[#161616] select-none text-stone-300">
 
+      {/* Section Header */}
+      <div className="text-center pt-24 pb-12 bg-[#161616] select-none">
+
+
+        <h2 className="font-rostex text-3xl md:text-5xl text-stone-100 tracking-wider uppercase font-light leading-none">
+          Pheasant
+        </h2>
+        <div className="w-16 h-[1px] bg-amber-500/40 mx-auto mt-4" />
+      </div>
+
       {/* Top Collage Row (Gallery) */}
-      <div className="max-w-8xl mx-auto px-6 md:px-16 pt-24 pb-12 grid grid-cols-3 gap-3 md:gap-6">
+      <div className="max-w-8xl mx-auto px-6 md:px-16 pb-12 grid grid-cols-3 gap-3 md:gap-6">
         <div className="overflow-hidden">
           <img
             src={hero3}
@@ -46,18 +56,13 @@ export default function PheasantCottage() {
       {/* Main Content Grid (Split-screen Style) */}
       <div className="max-w-8xl mx-auto px-6 md:px-16 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
 
-        {/* Left Side: Column Span 6 (Typography & Description) */}
+        {/* Left Side: Column Span 6 (Description) */}
         <div className="lg:col-span-6 flex flex-col justify-start pr-0 lg:pr-8">
 
-          <span className="text-stone-500 font-sans text-[10px] tracking-[0.25em] uppercase block mb-3 font-medium">
-            property showcase
-          </span>
-
-          <h2 className="font-rostex text-3xl md:text-5xl text-stone-100 tracking-normal lowercase leading-none mb-10">
-            Pheasant
-          </h2>
-
           <div className="space-y-6 font-sans font-light text-stone-400 text-sm md:text-base leading-relaxed">
+            <h3 className="font-normal font-normal text-base md:text-lg text-stone-200 tracking-wider uppercase mb-6 leading-snug">
+              COZY, TWO-BEDROOM CABIN – SLEEPS NINE
+            </h3>
             <p>
               Pheasant Cottage is a 2-bedroom, 1-bathroom cottage with fourteen windows providing spectacular views of the lake and surrounding area!
             </p>
@@ -76,7 +81,7 @@ export default function PheasantCottage() {
             </span>
 
             {/* Minimalist Amenities List */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 font-sans font-light text-xs md:text-sm text-stone-450 mt-6 pt-2 border-t border-stone-850/40">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 font-sans font-light text-xs md:text-sm text-stone-455 mt-6 pt-2 border-t border-stone-850/40">
               {amenities.map((amenity, index) => (
                 <li
                   key={index}

@@ -66,7 +66,7 @@ export default function Navbar() {
                         href="#"
                         className="font-serif text-[10px] min-[375px]:text-xs sm:text-sm md:text-2xl font-light tracking-widest md:tracking-[0.15em] uppercase hover:opacity-80 transition-opacity truncate"
                     >
-                        <img src={logo} alt="logo" className='h-20 md:h-40' />
+                        <img src={logo} alt="logo" className='h-20 md:h-35' />
                     </a>
                 </div>
 
