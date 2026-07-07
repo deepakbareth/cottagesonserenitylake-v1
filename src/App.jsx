@@ -8,7 +8,7 @@ import Footer from './layout/Footer';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-[#161616] font-sans selection:bg-amber-100 selection:text-amber-900 overflow-x-hidden">
+    <div className="relative min-h-screen bg-white font-sans selection:bg-amber-100 selection:text-amber-900 overflow-x-hidden">
       
       {/* Premium Navbar */}
       <Navbar />

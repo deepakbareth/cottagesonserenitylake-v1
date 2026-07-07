@@ -1,11 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
 import logo from '../assets/logo3.jpg';
+import logo2 from '../assets/logo4.jpg';
+
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeItem, setActiveItem] = useState('HOME');
     const [cottagesOpen, setCottagesOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const heroHeight = window.innerHeight * 0.8;
+            if (window.scrollY > heroHeight - 100) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -66,7 +85,11 @@ export default function Navbar() {
                         href="#"
                         className="font-serif text-[10px] min-[375px]:text-xs sm:text-sm md:text-2xl font-light tracking-widest md:tracking-[0.15em] uppercase hover:opacity-80 transition-opacity truncate"
                     >
-                        <img src={logo} alt="logo" className='h-20 md:h-35' />
+                        <img 
+                            src={scrolled ? logo2 : logo} 
+                            alt="logo" 
+                            className="h-20 md:h-35 filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] object-contain select-none max-w-[45vw] sm:max-w-[200px] md:max-w-none" 
+                        />
                     </a>
                 </div>
 
