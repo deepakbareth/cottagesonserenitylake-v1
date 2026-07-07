@@ -3,7 +3,6 @@ import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
 import logo from '../assets/logo3.jpg';
 import logo2 from '../assets/logo4.jpg';
 
-
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeItem, setActiveItem] = useState('HOME');
@@ -19,8 +18,10 @@ export default function Navbar() {
                 setScrolled(false);
             }
         };
+
         window.addEventListener('scroll', handleScroll);
         handleScroll();
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -64,18 +65,22 @@ export default function Navbar() {
     return (
         <>
             {/* Top Navbar */}
-            <nav className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-black/50 to-transparent  px-4 md:px-12 flex items-center justify-between text-white transition-all duration-300">
+            <nav className={`fixed top-0 left-0 right-0 z-40 px-4 md:px-12  flex items-center justify-between transition-all duration-300 ${scrolled ? 'bg-transparent text-stone-900' : 'bg-gradient-to-b from-black/50 to-transparent text-white'
+                }`}>
 
                 {/* Left Side: Menu Toggle Icon (Glassmorphic) */}
                 <button
                     onClick={toggleMenu}
-                    className="group cursor-pointer flex items-center justify-center p-2.5  rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/10 hover:border-white/30 transition-all duration-300 focus:outline-none shrink-0"
+                    className={`group cursor-pointer flex items-center justify-center p-2.5 rounded-full border transition-all duration-300 focus:outline-none shrink-0 ${scrolled
+                            ? 'bg-stone-900/10 hover:bg-stone-900/20 border-stone-900/20 text-stone-900'
+                            : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/10 text-white'
+                        }`}
                     aria-label="Toggle Menu"
                 >
                     {isOpen ? (
-                        <X className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:rotate-90 transition-transform duration-300" />
+                        <X className={`w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:rotate-90 duration-300 ${scrolled ? 'text-stone-900' : 'text-white'}`} />
                     ) : (
-                        <Menu className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:scale-105 transition-transform" />
+                        <Menu className={`w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-105 ${scrolled ? 'text-stone-900' : 'text-white'}`} />
                     )}
                 </button>
 
@@ -85,10 +90,10 @@ export default function Navbar() {
                         href="#"
                         className="font-serif text-[10px] min-[375px]:text-xs sm:text-sm md:text-2xl font-light tracking-widest md:tracking-[0.15em] uppercase hover:opacity-80 transition-opacity truncate"
                     >
-                        <img 
-                            src={scrolled ? logo2 : logo} 
-                            alt="logo" 
-                            className="h-20 md:h-35 filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] object-contain select-none max-w-[45vw] sm:max-w-[200px] md:max-w-none" 
+                        <img
+                            src={scrolled ? logo2 : logo}
+                            alt="logo"
+                            className="h-20 md:h-35 filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] object-contain select-none max-w-[45vw] sm:max-w-[200px] md:max-w-none"
                         />
                     </a>
                 </div>
@@ -97,17 +102,23 @@ export default function Navbar() {
                 <div className="flex items-center gap-2 md:gap-4 shrink-0">
                     <a
                         href="mailto:alisaalicia04@aol.com"
-                        className="flex items-center justify-center p-2 md:p-2.5 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/10 hover:border-white/30 transition-all duration-300 group"
+                        className={`flex items-center justify-center p-2 md:p-2.5 rounded-full border transition-all duration-300 group ${scrolled
+                                ? 'bg-stone-900/10 hover:bg-stone-900/20 border-stone-900/20 text-stone-900'
+                                : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/10 text-white'
+                            }`}
                         title="Email Us"
                     >
-                        <Mail className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:scale-105 transition-transform" />
+                        <Mail className={`w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-105 ${scrolled ? 'text-stone-900' : 'text-white'}`} />
                     </a>
                     <a
                         href="tel:(800) 997-9575"
-                        className="flex items-center justify-center p-2 md:p-2.5 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/10 hover:border-white/30 transition-all duration-300 group"
+                        className={`flex items-center justify-center p-2 md:p-2.5 rounded-full border transition-all duration-300 group ${scrolled
+                                ? 'bg-stone-900/10 hover:bg-stone-900/20 border-stone-900/20 text-stone-900'
+                                : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/10 text-white'
+                            }`}
                         title="Call Us"
                     >
-                        <Phone className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:scale-105 transition-transform" />
+                        <Phone className={`w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-105 ${scrolled ? 'text-stone-900' : 'text-white'}`} />
                     </a>
                 </div>
             </nav>
@@ -140,11 +151,11 @@ export default function Navbar() {
                             className={`pointer-events-auto flex items-center justify-start rounded-full font-sans text-[10px] sm:text-xs md:text-sm font-medium tracking-[0.15em] md:tracking-[0.2em] uppercase transition-all duration-500 shadow-lg select-none whitespace-nowrap ${isOpen ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                                 } ${item.isSubItem
                                     ? isActive
-                                        ? 'ml-4 md:ml-6 px-4 md:px-6 py-2 md:py-3 bg-white/20 backdrop-blur-md text-white border border-white/35 shadow-md animate-[fadeIn_0.3s_ease-out]'
-                                        : 'ml-4 md:ml-6 px-4 md:px-6 py-2 md:py-3 bg-black/40 backdrop-blur-md text-stone-300 border border-white/10 hover:bg-black/60 hover:text-white hover:border-white/25 hover:translate-x-1 md:hover:translate-x-2 animate-[fadeIn_0.3s_ease-out]'
+                                        ? 'ml-4 md:ml-6 px-4 md:px-6 py-2 md:py-3 bg-amber-600/90 hover:bg-amber-700/95 text-white border border-amber-500 shadow-md animate-[fadeIn_0.3s_ease-out]'
+                                        : 'ml-4 md:ml-6 px-4 md:px-6 py-2 md:py-3 bg-stone-900/85 hover:bg-stone-950 text-stone-100 border border-stone-850 hover:text-white hover:border-stone-750 hover:translate-x-1 md:hover:translate-x-2 animate-[fadeIn_0.3s_ease-out]'
                                     : isActive || (isCottagesToggle && cottagesOpen)
-                                        ? 'px-4 md:px-6 py-2.5 md:py-3 bg-white/20 backdrop-blur-md text-white border border-white/35 hover:bg-white/35 hover:border-white/40'
-                                        : 'px-4 md:px-6 py-2.5 md:py-3 bg-black/40 backdrop-blur-md text-stone-300 border border-white/10 hover:bg-black/60 hover:text-white hover:border-white/25 hover:translate-x-1 md:hover:translate-x-2'
+                                        ? 'px-4 md:px-6 py-2.5 md:py-3 bg-amber-600/90 hover:bg-amber-700/95 text-white border border-amber-500'
+                                        : 'px-4 md:px-6 py-2.5 md:py-3 bg-stone-900/85 hover:bg-stone-950 text-stone-100 border border-stone-850 hover:text-white hover:border-stone-750 hover:translate-x-1 md:hover:translate-x-2'
                                 }`}
                         >
                             <span className="flex items-center gap-1.5 md:gap-2">
@@ -153,8 +164,7 @@ export default function Navbar() {
                                 )}
                                 {item.name}
                                 {isCottagesToggle && (
-                                    <ChevronDown className={`w-3.5 h-3.5 md:w-4 md:h-4 ml-0.5 md:ml-1 transition-transform duration-300 ${cottagesOpen ? 'rotate-180 text-amber-300' : 'rotate-0 text-stone-400 group-hover:text-white'
-                                        }`} />
+                                    <ChevronDown className={`w-3.5 h-3.5 md:w-4 md:h-4 ml-0.5 md:ml-1 transition-transform duration-300 ${cottagesOpen ? 'rotate-180 text-amber-300' : 'rotate-0 text-stone-400 group-hover:text-white'}`} />
                                 )}
                             </span>
                         </a>
