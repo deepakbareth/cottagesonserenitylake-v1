@@ -72,8 +72,8 @@ export default function Navbar() {
                 <button
                     onClick={toggleMenu}
                     className={`group cursor-pointer flex items-center justify-center p-2.5 rounded-full border transition-all duration-300 focus:outline-none shrink-0 ${scrolled
-                            ? 'bg-stone-900/10 hover:bg-stone-900/20 border-stone-900/20 text-stone-900'
-                            : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/10 text-white'
+                        ? 'bg-stone-900/10 hover:bg-stone-900/20 border-stone-900/20 text-stone-900'
+                        : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/10 text-white'
                         }`}
                     aria-label="Toggle Menu"
                 >
@@ -103,18 +103,18 @@ export default function Navbar() {
                     <a
                         href="mailto:alisaalicia04@aol.com"
                         className={`flex items-center justify-center p-2 md:p-2.5 rounded-full border transition-all duration-300 group ${scrolled
-                                ? 'bg-stone-900/10 hover:bg-stone-900/20 border-stone-900/20 text-stone-900'
-                                : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/10 text-white'
+                            ? 'bg-stone-900/10 hover:bg-stone-900/20 border-stone-900/20 text-stone-900'
+                            : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/10 text-white'
                             }`}
                         title="Email Us"
                     >
                         <Mail className={`w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-105 ${scrolled ? 'text-stone-900' : 'text-white'}`} />
                     </a>
                     <a
-                        href="tel:(800) 997-9575"
+                        href="tel:+1 (800) 997-9575"
                         className={`flex items-center justify-center p-2 md:p-2.5 rounded-full border transition-all duration-300 group ${scrolled
-                                ? 'bg-stone-900/10 hover:bg-stone-900/20 border-stone-900/20 text-stone-900'
-                                : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/10 text-white'
+                            ? 'bg-stone-900/10 hover:bg-stone-900/20 border-stone-900/20 text-stone-900'
+                            : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/10 text-white'
                             }`}
                         title="Call Us"
                     >
