@@ -76,8 +76,8 @@ export default function PheasantCottage() {
 
           {/* Underlined Amenities section header */}
           <div className="mt-12">
-            <span className="font-serif italic text-stone-100 text-sm md:text-base border-b border-stone-100 pb-1 inline-block hover:text-amber-300 hover:border-amber-300 transition-colors duration-300">
-              amenities we are working with
+            <span className="font-serif  text-stone-100 text-sm md:text-base border-b border-stone-100 pb-1 inline-block hover:text-amber-300 hover:border-amber-300 transition-colors duration-300">
+              amenities
             </span>
 
             {/* Minimalist Amenities List */}
