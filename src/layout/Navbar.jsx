@@ -65,7 +65,9 @@ export default function Navbar() {
     return (
         <>
             {/* Top Navbar */}
-            <nav className={`fixed top-0 left-0 right-0 z-40 px-4 md:px-12  flex items-center justify-between transition-all duration-300 ${scrolled ? 'bg-transparent text-stone-900' : 'bg-gradient-to-b from-black/50 to-transparent text-white'
+            <nav className={`fixed top-0 left-0 right-0 z-40 px-4 md:px-12 flex items-center justify-between transition-all duration-300 ${scrolled
+                ? 'bg-white border-b border-stone-200/80 text-stone-900 shadow-sm py-0'
+                : 'bg-gradient-to-b from-black/50 to-transparent text-white py-0'
                 }`}>
 
                 {/* Left Side: Menu Toggle Icon (Glassmorphic) */}
@@ -93,7 +95,8 @@ export default function Navbar() {
                         <img
                             src={scrolled ? logo2 : logo}
                             alt="logo"
-                            className="h-20 md:h-35 filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] object-contain select-none max-w-[45vw] sm:max-w-[200px] md:max-w-none"
+                            className={`filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] object-contain select-none max-w-[45vw] sm:max-w-[200px] md:max-w-none transition-all duration-300 ${scrolled ? 'h-14 md:h-22' : 'h-20 md:h-35'
+                                }`}
                         />
                     </a>
                 </div>
