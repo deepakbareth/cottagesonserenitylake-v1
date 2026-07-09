@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Column 1: Branding & Description (Col Span 4) */}
         <div className="lg:col-span-4 flex flex-col items-start">
           <h3 className="font-rostex text-lg md:text-xl text-stone-100 tracking-[0.2em] uppercase mb-5">
-            COTTAGES ON SERENITY LAKE
+            COTTAGES  <br /> ON SERENITY LAKE
           </h3>
           <p className="font-sans font-light text-stone-500 text-xs md:text-sm leading-relaxed max-w-sm">
             Experience the perfect blend of natural tranquility and premium luxury. Nestled on pristine lakefront shores, our cabins offer private waterfronts, hot tubs, and peaceful getaways designed to help you reconnect with nature.
@@ -44,13 +44,13 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 font-sans text-xs tracking-wider text-stone-500">
             <li>
-              <a href="#pheasant-cottage" className="hover:text-white transition-colors duration-300">PHEASANT COTTAGE</a>
+              <a href="#pheasant-cottage" className="hover:text-white transition-colors duration-300">THE PHEASANT</a>
             </li>
             <li>
-              <a href="#bears-den" className="hover:text-white transition-colors duration-300">BEAR'S DEN</a>
+              <a href="#bears-den" className="hover:text-white transition-colors duration-300">THE BEAR'S DEN</a>
             </li>
             <li>
-              <a href="#tall-pines-lodge" className="hover:text-white transition-colors duration-300">TALL PINES LODGE</a>
+              <a href="#tall-pines-lodge" className="hover:text-white transition-colors duration-300">THE TALL PINES</a>
             </li>
           </ul>
         </div>

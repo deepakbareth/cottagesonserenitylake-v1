@@ -41,9 +41,9 @@ export default function Navbar() {
             link: '#',
             hasDropdown: true,
             subItems: [
-                { name: 'PHEASANT COTTAGE', link: '#' },
-                { name: 'BEAR\'S DEN', link: '#' },
-                { name: 'TALL PINES LODGE', link: '#' }
+                { name: 'THE PHEASANT', link: '#' },
+                { name: 'THE BEAR\'S DEN', link: '#' },
+                { name: 'THE TALL PINES', link: '#' }
             ]
         },
         { name: 'POLICIES', link: '#' },
@@ -66,7 +66,7 @@ export default function Navbar() {
         <>
             {/* Top Navbar */}
             <nav className={`fixed top-0 left-0 right-0 z-40 px-4 md:px-12 flex items-center justify-between transition-all duration-300 ${scrolled
-                ? 'bg-white border-b border-stone-200/80 text-stone-900 shadow-sm py-0'
+                ? 'bg-white/50 backdrop-blur-md  text-stone-900 shadow-sm py-0'
                 : 'bg-gradient-to-b from-black/50 to-transparent text-white py-0'
                 }`}>
 
