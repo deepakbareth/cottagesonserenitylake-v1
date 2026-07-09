@@ -2,17 +2,18 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'Rostex';
-    src: url('./assets/fonts/rostex-regular.otf') format('opentype');
+    font-family: 'Cinzel Decorative';
+    src: url('./assets/fonts/CinzelDecorative-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @theme {
-    --font-serif: "Rostex", "Playfair Display", serif;
+    --font-serif: "Cinzel Decorative", "Playfair Display", serif;
     --font-sans: "Montserrat", sans-serif;
-    --font-rostex: "Rostex", sans-serif;
+    --font-rostex: "Cinzel Decorative", sans-serif;
+    --font-cinzel: "Cinzel Decorative", serif;
     --color-stone-bg: #d1cfc9;
     --color-concrete: #bab9b5;
     --color-slate: #3a4146;
